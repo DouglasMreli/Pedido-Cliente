@@ -9,12 +9,8 @@ fun main() {
     val listaClientes = mutableListOf<Cliente>()
     val listaPedidos = mutableListOf<Pedido>()
 
-    leArquivoCliente(listaClientes)
-    leArquivoPedido(listaClientes, listaPedidos)
-    gravaArquivos(listaClientes, listaPedidos)
-    println(listaClientes)
-    println()
-    println(listaPedidos)
+    
+
 }
 
 class Cliente(
@@ -197,7 +193,6 @@ fun criaData(dataString: String): LocalDateTime {
     return LocalDateTime.of(ano, mes, dia, hora, minuto)
 }
 
-
 fun gravaArquivos(listaClientes: MutableList<Cliente>, listaPedidos: MutableList<Pedido>){
 
     for(cliente in listaClientes) {
@@ -208,3 +203,6 @@ fun gravaArquivos(listaClientes: MutableList<Cliente>, listaPedidos: MutableList
         pedido.gravaEmArquivo()
     }
 }
+
+
+
